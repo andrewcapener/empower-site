@@ -1,0 +1,803 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Wed Apr 29 2026 20:29:28 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="69680db6fff63daf84873a47" data-wf-site="69680db5fff63daf848738e1" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Montegrappa – Webflow HTML website template</title>
+  <meta content="A premium Webflow template built for modern businesses seeking operational clarity, elegant design, and scalable performance. Perfect for SaaS, agencies, and growth-driven companies." name="description">
+  <meta content="Montegrappa – Webflow HTML website template" property="og:title">
+  <meta content="A premium Webflow template built for modern businesses seeking operational clarity, elegant design, and scalable performance. Perfect for SaaS, agencies, and growth-driven companies." property="og:description">
+  <meta content="" property="og:image">
+  <meta content="Montegrappa – Webflow HTML website template" property="twitter:title">
+  <meta content="A premium Webflow template built for modern businesses seeking operational clarity, elegant design, and scalable performance. Perfect for SaaS, agencies, and growth-driven companies." property="twitter:description">
+  <meta content="" property="twitter:image">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/empower-9d8379.webflow.css" rel="stylesheet" type="text/css">
+  <style>html.w-mod-js:not(.w-mod-ix3) :is(.blog_card, .cta_heading, .about-content, .home_features-card, .footer_bottom, .large-heading, .home-about_grid, .home-features, .heading_component, #explore, #explore-bg, .footer_top, .slider, .left-arrow, .bottom, .big-number, .about-slide .slider-hover, .sticky-image.is--center, .sticky-image.is--left, .sticky-image.is--right, .button-primary .button-primary_bg, .tab_item) {visibility: hidden !important;}</style>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon"><!--  Lenis CSS  -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.css">
+  <!--  Lenis JS  -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js" defer></script>
+  <meta name="format-detection" content="telephone=no">
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="global-styles w-embed">
+      <style>
+/* Make text look crisper and more legible in all browsers */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+/* Set color style to inherit */
+.inherit-color * {
+    color: inherit;
+}
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+/* 
+Make the following elements inherit typography styles from the parent and not have hardcoded values. 
+Important: You will not be able to style for example "All Links" in Designer with this CSS applied.
+Uncomment this CSS to use it in the project. Leave this message for future hand-off.
+*/
+/*
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+*/
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.padding-0 {
+  padding: 0rem !important;
+}
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+</style>
+    </div>
+    <main class="main-wrapper">
+      <div class="navbar_wrap">
+        <div class="notification-bar">
+          <div class="text-style-allcaps text-size-tiny">
+            <a href="#">DME acquires Conductive Energy on October 1, 2025. Both companies merged together to form Empower EIT.  </a>
+          </div>
+          <a href="https://empowereit.com/news/dme-energy-resources-acquires-conductive-energy-combined-company-launches-as-empower-eit-establishes-new-dallas-headquarters-and-announces-new-equity-partner" class="link">View Press Release &gt;&gt; </a>
+        </div>
+        <div data-animation="default" data-collapse="medium" data-duration="400" data-easing="ease" data-easing2="ease" role="banner" class="navbar w-nav">
+          <div class="nav_component">
+            <div class="brand_wrap">
+              <a href="index.html" class="brand w-nav-brand"><img src="images/empower.svg" loading="lazy" width="36" height="36" alt="" class="logo"></a>
+            </div>
+            <div class="nav_menu">
+              <nav role="navigation" class="nav_menu-wrap w-nav-menu">
+                <div class="nav_menu-left">
+                  <div data-delay="0" data-hover="true" data-w-id="75ec1212-96ff-147e-dc89-72d084a5c397" class="nav_dropdown w-dropdown">
+                    <div class="dropdown_toggle w-dropdown-toggle">
+                      <div>About</div>
+                      <div class="dropdown_icon w-icon-dropdown-toggle"></div>
+                    </div>
+                    <nav class="navigation w-dropdown-list">
+                      <div class="dropdown_component">
+                        <div class="nav-link_left">
+                          <div class="nav_title">
+                            <div class="text-size-large">About Empower</div>
+                            <div class="max-width-medium is--nav">
+                              <div>Empower EIT presents differentiated service opportunities in next-generation lithium production and advanced energy technologies. Through proprietary Direct Lithium Extraction (DLE) and conversion technologies, combined with large-scale lithium resources, Empower is building a fully vertically integrated platform spanning technology, development, and critical mineral assets.</div>
+                            </div>
+                          </div>
+                          <div class="nav_card_warp">
+                            <a href="about.html" class="nav_card-link w-inline-block">
+                              <div class="nav_card-img"><img sizes="100vw" srcset="images/Screenshot-2026-01-30-at-12.56.27-PM-p-500.png 500w, images/Screenshot-2026-01-30-at-12.56.27-PM-p-800.png 800w, images/Screenshot-2026-01-30-at-12.56.27-PM-p-1080.png 1080w, images/Screenshot-2026-01-30-at-12.56.27-PM-p-1600.png 1600w, images/Screenshot-2026-01-30-at-12.56.27-PM-p-2000.png 2000w, images/Screenshot-2026-01-30-at-12.56.27-PM.png 2234w" alt="" src="images/Screenshot-2026-01-30-at-12.56.27-PM.png" loading="lazy" class="image is--explore"></div>
+                              <div class="nav_card-text">
+                                <div class="text-style-allcaps text-weight-medium text-size-tiny">About</div>
+                              </div>
+                            </a>
+                            <a href="leadership.html" class="nav_card-link w-inline-block">
+                              <div class="nav_card-img"><img sizes="100vw" srcset="images/Screenshot-2026-01-30-at-12.58.04-PM-p-500.png 500w, images/Screenshot-2026-01-30-at-12.58.04-PM-p-800.png 800w, images/Screenshot-2026-01-30-at-12.58.04-PM-p-1080.png 1080w, images/Screenshot-2026-01-30-at-12.58.04-PM-p-1600.png 1600w, images/Screenshot-2026-01-30-at-12.58.04-PM-p-2000.png 2000w, images/Screenshot-2026-01-30-at-12.58.04-PM.png 2466w" alt="" src="images/Screenshot-2026-01-30-at-12.58.04-PM.png" loading="lazy" class="image is--explore"></div>
+                              <div class="nav_card-text">
+                                <div class="text-style-allcaps text-weight-medium text-size-tiny">Leadership</div>
+                              </div>
+                            </a>
+                            <a href="services.html" class="nav_card-link w-inline-block">
+                              <div class="nav_card-img"><img sizes="100vw" srcset="images/Screenshot-2026-01-30-at-2.28.21-PM-p-500.png 500w, images/Screenshot-2026-01-30-at-2.28.21-PM-p-800.png 800w, images/Screenshot-2026-01-30-at-2.28.21-PM-p-1080.png 1080w, images/Screenshot-2026-01-30-at-2.28.21-PM-p-1600.png 1600w, images/Screenshot-2026-01-30-at-2.28.21-PM.png 1722w" alt="" src="images/Screenshot-2026-01-30-at-2.28.21-PM.png" loading="lazy" class="image is--explore"></div>
+                              <div class="nav_card-text">
+                                <div class="text-style-allcaps text-weight-medium text-size-tiny">Services</div>
+                              </div>
+                            </a>
+                          </div>
+                        </div>
+                        <div class="nav-link_right">
+                          <div class="nav-card_content">
+                            <div class="max-width-small">
+                              <div class="text-size-large">Vertically integrated lithium development</div>
+                            </div>
+                            <p>Empower is among the first companies to offer a true end-to-end lithium solution, integrating both concentration and refining processes within a single system.</p>
+                            <div class="margin-top margin-small">
+                              <a href="projects.html" class="button-primary-2 w-inline-block">
+                                <div class="button-text">
+                                  <div class="text-size-regular text-weight-medium">Projects</div>
+                                  <div class="button-text_hover">
+                                    <div class="text-size-regular text-weight-medium">Get started</div>
+                                  </div>
+                                </div>
+                                <div class="button-primary_bg"></div>
+                              </a>
+                            </div>
+                          </div>
+                          <div class="dropdown_card-img"><img sizes="100vw" srcset="images/Screenshot-2026-01-21-at-2.22.54-PM-p-500.png 500w, images/Screenshot-2026-01-21-at-2.22.54-PM-p-800.png 800w, images/Screenshot-2026-01-21-at-2.22.54-PM-p-1080.png 1080w, images/Screenshot-2026-01-21-at-2.22.54-PM-p-1600.png 1600w, images/Screenshot-2026-01-21-at-2.22.54-PM-p-2000.png 2000w, images/Screenshot-2026-01-21-at-2.22.54-PM.png 2386w" alt="" src="images/Screenshot-2026-01-21-at-2.22.54-PM.png" loading="lazy" class="image"></div>
+                        </div>
+                      </div>
+                    </nav>
+                  </div>
+                  <a href="services.html" class="nav_link w-inline-block">
+                    <div>Services</div>
+                  </a>
+                  <a href="projects.html" class="nav_link w-inline-block">
+                    <div>Projects</div>
+                  </a>
+                  <a href="our-story.html" class="nav_link w-inline-block">
+                    <div>Our Story</div>
+                  </a>
+                  <a href="sustainability.html" class="nav_link w-inline-block">
+                    <div>Sustainability</div>
+                  </a>
+                  <a href="investment.html" class="nav_link w-inline-block">
+                    <div>Investment</div>
+                  </a>
+                </div>
+                <div class="nav_menu-right">
+                  <a href="contact.html" class="button-primary w-inline-block">
+                    <div class="button-text">
+                      <div class="text-size-regular text-weight-medium">Get in Touch</div>
+                      <div class="button-text_hover">
+                        <div class="text-size-regular text-weight-medium">Get in Touch</div>
+                      </div>
+                    </div>
+                    <div class="button-primary_bg"></div>
+                  </a>
+                </div>
+              </nav>
+              <div class="nav-button w-nav-button">
+                <div class="w-icon-nav-menu"></div>
+              </div>
+            </div>
+          </div>
+          <div class="nav_blur"></div>
+        </div>
+      </div>
+      <section id="hero" class="section_about">
+        <div class="padding-global">
+          <div class="w-layout-blockcontainer container-medium w-container">
+            <div class="team-member">
+              <div class="team_photo"><img src="https://d3e54v103j8qbb.cloudfront.net/plugins/Basic/assets/placeholder.60f9b1840c.svg" loading="lazy" alt="" class="image w-dyn-bind-empty"></div>
+              <div class="team_content">
+                <h1 class="heading-style-h2 text-weight-normal w-dyn-bind-empty"></h1>
+                <div class="team-position">
+                  <div class="text-style-allcaps text-size-small w-dyn-bind-empty"></div>
+                </div>
+                <div class="team-bio">
+                  <div class="text-rich-text w-dyn-bind-empty w-richtext"></div>
+                </div>
+                <div class="team-social">
+                  <div class="social">
+                    <a href="https://webflow.com/templates/designers/lucas-gusso" target="_blank" class="social_link team w-inline-block">
+                      <div class="social_icon w-embed"><svg width="16" height="16" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.2052 1.9831C10.7862 2.16933 10.3439 2.28573 9.87827 2.35557C10.3439 2.07622 10.7163 1.63392 10.8793 1.0985C10.437 1.35457 9.94811 1.5408 9.41269 1.6572C8.99367 1.2149 8.38842 0.935547 7.7366 0.935547C6.47954 0.935547 5.45526 1.95982 5.45526 3.21689C5.45526 3.40312 5.47854 3.56608 5.5251 3.72903C3.6395 3.63591 1.94013 2.72803 0.799457 1.33129C0.613225 1.68048 0.49683 2.05294 0.49683 2.47196C0.49683 3.26345 0.892573 3.96182 1.52111 4.38084C1.14864 4.35756 0.799457 4.26445 0.473551 4.10149V4.12477C0.473551 5.24216 1.26504 6.17333 2.31259 6.38284C2.12636 6.42939 1.91685 6.45267 1.70734 6.45267C1.56766 6.45267 1.40471 6.42939 1.26504 6.40612C1.56766 7.314 2.40571 7.98909 3.40671 7.98909C2.61522 8.59434 1.6375 8.96681 0.566667 8.96681C0.380435 8.96681 0.194203 8.96681 0.03125 8.94353C1.05553 9.59534 2.24276 9.96781 3.54638 9.96781C7.75988 9.96781 10.0645 6.47595 10.0645 3.44968C10.0645 3.35656 10.0645 3.24017 10.0645 3.14705C10.5068 2.84443 10.9025 2.44868 11.2052 1.9831Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                    <a href="https://webflow.com/templates/designers/lucas-gusso" target="_blank" class="social_link team w-inline-block">
+                      <div class="social_icon w-embed"><svg width="9" height="17" viewbox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.46191 16.2163V8.91796H0.00585938V6.07365H2.46191V3.97605C2.46191 1.5418 3.94866 0.216309 6.12018 0.216309C7.16036 0.216309 8.05434 0.293752 8.31487 0.328367V2.8723L6.8088 2.87298C5.62781 2.87298 5.39914 3.43417 5.39914 4.25768V6.07365H8.2157L7.84897 8.91796H5.39914V16.2163H2.46191Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                    <a href="https://webflow.com/templates/designers/lucas-gusso" target="_blank" class="social_link team w-inline-block">
+                      <div class="social_icon w-embed"><svg width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.77501 2.21587C10.9109 2.21587 11.1638 2.22387 12.0076 2.26234C12.5149 2.26855 13.0174 2.36171 13.4933 2.53776C13.8383 2.67084 14.1517 2.87469 14.4132 3.13621C14.6747 3.39772 14.8786 3.7111 15.0117 4.05616C15.1877 4.53199 15.2809 5.03449 15.2871 5.54181C15.3252 6.38558 15.3336 6.63852 15.3336 8.77441C15.3336 10.9103 15.3256 11.1633 15.2871 12.007C15.2809 12.5143 15.1877 13.0168 15.0117 13.4927C14.8786 13.8377 14.6747 14.1511 14.4132 14.4126C14.1517 14.6741 13.8383 14.878 13.4933 15.0111C13.0174 15.1871 12.5149 15.2803 12.0076 15.2865C11.1642 15.3246 10.9113 15.333 8.77501 15.333C6.63873 15.333 6.38579 15.325 5.5424 15.2865C5.03509 15.2803 4.53259 15.1871 4.05676 15.0111C3.71169 14.878 3.39832 14.6741 3.1368 14.4126C2.87529 14.1511 2.67143 13.8377 2.53835 13.4927C2.3623 13.0168 2.26915 12.5143 2.26294 12.007C2.22485 11.1633 2.21647 10.9103 2.21647 8.77441C2.21647 6.63852 2.22446 6.38558 2.26294 5.54181C2.26915 5.03449 2.3623 4.53199 2.53835 4.05616C2.67143 3.7111 2.87529 3.39772 3.1368 3.13621C3.39832 2.87469 3.71169 2.67084 4.05676 2.53776C4.53259 2.36171 5.03509 2.26855 5.5424 2.26234C6.38617 2.22425 6.63911 2.21587 8.77501 2.21587V2.21587ZM8.77501 0.774414C6.60369 0.774414 6.33017 0.783556 5.47688 0.822412C4.81293 0.835618 4.15603 0.961331 3.53412 1.1942C3.00062 1.39521 2.5174 1.7102 2.11818 2.11721C1.71081 2.51657 1.39555 3.00006 1.19442 3.5339C0.961546 4.15581 0.835833 4.81272 0.822627 5.47667C0.784533 6.3292 0.775391 6.60271 0.775391 8.77403C0.775391 10.9454 0.784533 11.2189 0.823388 12.0722C0.836595 12.7361 0.962308 13.393 1.19518 14.0149C1.39609 14.5487 1.71109 15.0322 2.11818 15.4316C2.51762 15.8387 3.00111 16.1537 3.53488 16.3546C4.15679 16.5875 4.81369 16.7132 5.47764 16.7264C6.33094 16.7645 6.6033 16.7744 8.77577 16.7744C10.9482 16.7744 11.2206 16.7653 12.0739 16.7264C12.7379 16.7132 13.3948 16.5875 14.0167 16.3546C14.5479 16.1487 15.0303 15.8342 15.4331 15.4312C15.8358 15.0282 16.15 14.5455 16.3556 14.0142C16.5885 13.3923 16.7142 12.7353 16.7274 12.0714C16.7655 11.2189 16.7746 10.9454 16.7746 8.77403C16.7746 6.60271 16.7655 6.3292 16.7266 5.4759C16.7134 4.81195 16.5877 4.15505 16.3548 3.53314C16.1539 2.99937 15.8389 2.51588 15.4318 2.11645C15.0324 1.70935 14.5489 1.39435 14.0151 1.19344C13.3932 0.960569 12.7363 0.834856 12.0724 0.82165C11.2198 0.783557 10.9463 0.774414 8.77501 0.774414Z" fill="currentColor"></path>
+                          <path d="M8.77597 4.66797C7.96348 4.66797 7.16924 4.9089 6.49369 5.36029C5.81813 5.81168 5.2916 6.45326 4.98067 7.2039C4.66975 7.95454 4.5884 8.78052 4.7469 9.57739C4.90541 10.3743 5.29666 11.1062 5.87118 11.6808C6.44569 12.2553 7.17766 12.6465 7.97454 12.805C8.77141 12.9635 9.59739 12.8822 10.348 12.5713C11.0987 12.2603 11.7402 11.7338 12.1916 11.0582C12.643 10.3827 12.884 9.58845 12.884 8.77596C12.884 7.68646 12.4512 6.64157 11.6808 5.87117C10.9104 5.10077 9.86547 4.66797 8.77597 4.66797ZM8.77597 11.4425C8.24857 11.4425 7.73303 11.2861 7.29452 10.9931C6.85601 10.7001 6.51423 10.2837 6.3124 9.7964C6.11058 9.30916 6.05777 8.77301 6.16066 8.25575C6.26355 7.73849 6.51752 7.26336 6.89044 6.89044C7.26336 6.51751 7.73849 6.26355 8.25575 6.16066C8.77301 6.05777 9.30916 6.11058 9.79641 6.3124C10.2837 6.51423 10.7001 6.856 10.9931 7.29451C11.2861 7.73302 11.4425 8.24857 11.4425 8.77596C11.4425 9.48317 11.1616 10.1614 10.6615 10.6615C10.1614 11.1616 9.48318 11.4425 8.77597 11.4425V11.4425Z" fill="currentColor"></path>
+                          <path d="M13.0459 5.46434C13.5761 5.46434 14.0058 5.03456 14.0058 4.50439C14.0058 3.97422 13.5761 3.54443 13.0459 3.54443C12.5157 3.54443 12.0859 3.97422 12.0859 4.50439C12.0859 5.03456 12.5157 5.46434 13.0459 5.46434Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                    <a href="https://webflow.com/templates/designers/lucas-gusso" target="_blank" class="social_link team w-inline-block">
+                      <div class="social_icon w-embed"><svg width="16" height="16" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_188_814)">
+                            <path d="M2.99171 1.50014C2.99171 2.092 2.51599 2.57157 1.92885 2.57157C1.34171 2.57157 0.865993 2.092 0.865993 1.50014C0.865993 0.908711 1.34171 0.428711 1.92885 0.428711C2.51599 0.428711 2.99171 0.908711 2.99171 1.50014ZM3.00028 3.42871H0.857422V10.2859H3.00028V3.42871ZM6.42114 3.42871H4.29199V10.2859H6.42156V6.68628C6.42156 4.68485 9.00542 4.52114 9.00542 6.68628V10.2859H11.1431V5.944C11.1431 2.56685 7.31942 2.68985 6.42114 4.35228V3.42871Z" fill="currentColor"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_188_814">
+                              <rect width="10.2857" height="12" fill="currentColor" transform="translate(0.857422)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section_cta">
+        <div data-tab-duration="5000" data-tab-wrapper="" data-tab-autoplay="true" class="cta_component">
+          <div class="cta_content">
+            <div class="cta_heading"><img src="images/empower-white-with-icon-05.svg" loading="lazy" alt="" class="image-5">
+              <h2 class="heading-style-h1 text-weight-normal">Building the next generation of lithium infrastructure.</h2>
+              <p class="paragraph-2"><br>Empower works closely with resource owners, investors, and local stakeholders to align incentives, reduce execution risk, and support collaborative development from early testing through commercialization.</p>
+              <div class="buttons-wrapper left">
+                <a href="contact.html" class="button-primary w-inline-block">
+                  <div class="button-text">
+                    <div class="text-size-regular text-weight-medium">Partner With Empower</div>
+                    <div class="button-text_hover">
+                      <div class="text-size-regular text-weight-medium">Partner With Empower</div>
+                    </div>
+                  </div>
+                  <div class="button-primary_bg"></div>
+                </a>
+                <a href="projects.html" class="button-secondary w-inline-block">
+                  <div class="button-text">
+                    <div class="text-size-regular text-weight-medium">Projects</div>
+                  </div>
+                  <div class="button-secondary_bg"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="cta_background">
+            <div class="image-bottom-overlay"></div><img src="images/Aeriel34.jpg" loading="lazy" sizes="(max-width: 3968px) 100vw, 3968px" srcset="images/Aeriel34-p-500.jpg 500w, images/Aeriel34-p-800.jpg 800w, images/Aeriel34-p-1080.jpg 1080w, images/Aeriel34-p-1600.jpg 1600w, images/Aeriel34-p-2000.jpg 2000w, images/Aeriel34-p-2600.jpg 2600w, images/Aeriel34-p-3200.jpg 3200w, images/Aeriel34.jpg 3968w" alt="" class="image">
+          </div>
+        </div>
+      </section>
+      <footer class="section_footer">
+        <div class="padding-global">
+          <div class="w-layout-blockcontainer container-huge w-container">
+            <div class="footer_component">
+              <div class="footer_top">
+                <div class="footer_left">
+                  <a href="#" class="footer_logo w-inline-block"><img src="images/empower-white-01.svg" loading="lazy" width="Auto" alt="" class="footer_logo-img"></a>
+                  <div class="footer_paragraph">
+                    <p>Vertically Integrated Lithium — Global Deployment</p>
+                  </div>
+                  <div class="newsletter w-form">
+                    <form id="wf-form-Newsletter" name="wf-form-Newsletter" data-name="Newsletter" method="get" class="newsletter-form" data-wf-page-id="69680db6fff63daf84873a47" data-wf-element-id="fe51362f-eaec-bdda-d9ff-4b744132cf41">
+                      <div class="newsletter-wrap"><input class="newsletter-field w-input" maxlength="256" name="name" data-name="Name" placeholder="Enter your email" type="email" id="name">
+                        <div class="newsletter-button_wrap"><input type="submit" data-wait="" class="newsletter-button w-button" value="">
+                          <div class="newsletter-button_arrow w-embed"><svg width="11" height="10" viewbox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M9.12109 5L4.41406 9.70703L3 8.29297L6.29297 5L3 1.70703L4.41406 0.292969L9.12109 5Z" fill="currentColor"></path>
+                            </svg></div>
+                        </div>
+                      </div>
+                      <div class="text-style-allcaps text-size-tiny opacity-60 text-weight-light">Your information is never disclosed to third parties.</div>
+                    </form>
+                    <div class="success-message w-form-done">
+                      <div>Thank you! Your submission has been received!</div>
+                    </div>
+                    <div class="error-message w-form-fail">
+                      <div>Oops! Something went wrong while submitting the form.</div>
+                    </div>
+                  </div>
+                  <div class="social">
+                    <a href="#" target="_blank" class="social_link w-inline-block">
+                      <div class="social_icon w-embed"><svg width="16" height="16" viewbox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M11.2052 1.9831C10.7862 2.16933 10.3439 2.28573 9.87827 2.35557C10.3439 2.07622 10.7163 1.63392 10.8793 1.0985C10.437 1.35457 9.94811 1.5408 9.41269 1.6572C8.99367 1.2149 8.38842 0.935547 7.7366 0.935547C6.47954 0.935547 5.45526 1.95982 5.45526 3.21689C5.45526 3.40312 5.47854 3.56608 5.5251 3.72903C3.6395 3.63591 1.94013 2.72803 0.799457 1.33129C0.613225 1.68048 0.49683 2.05294 0.49683 2.47196C0.49683 3.26345 0.892573 3.96182 1.52111 4.38084C1.14864 4.35756 0.799457 4.26445 0.473551 4.10149V4.12477C0.473551 5.24216 1.26504 6.17333 2.31259 6.38284C2.12636 6.42939 1.91685 6.45267 1.70734 6.45267C1.56766 6.45267 1.40471 6.42939 1.26504 6.40612C1.56766 7.314 2.40571 7.98909 3.40671 7.98909C2.61522 8.59434 1.6375 8.96681 0.566667 8.96681C0.380435 8.96681 0.194203 8.96681 0.03125 8.94353C1.05553 9.59534 2.24276 9.96781 3.54638 9.96781C7.75988 9.96781 10.0645 6.47595 10.0645 3.44968C10.0645 3.35656 10.0645 3.24017 10.0645 3.14705C10.5068 2.84443 10.9025 2.44868 11.2052 1.9831Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                    <a href="#" target="_blank" class="social_link w-inline-block">
+                      <div class="social_icon w-embed"><svg width="9" height="17" viewbox="0 0 9 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M2.46191 16.2163V8.91796H0.00585938V6.07365H2.46191V3.97605C2.46191 1.5418 3.94866 0.216309 6.12018 0.216309C7.16036 0.216309 8.05434 0.293752 8.31487 0.328367V2.8723L6.8088 2.87298C5.62781 2.87298 5.39914 3.43417 5.39914 4.25768V6.07365H8.2157L7.84897 8.91796H5.39914V16.2163H2.46191Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                    <a href="#" target="_blank" class="social_link w-inline-block">
+                      <div class="social_icon w-embed"><svg width="17" height="17" viewbox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M8.77501 2.21587C10.9109 2.21587 11.1638 2.22387 12.0076 2.26234C12.5149 2.26855 13.0174 2.36171 13.4933 2.53776C13.8383 2.67084 14.1517 2.87469 14.4132 3.13621C14.6747 3.39772 14.8786 3.7111 15.0117 4.05616C15.1877 4.53199 15.2809 5.03449 15.2871 5.54181C15.3252 6.38558 15.3336 6.63852 15.3336 8.77441C15.3336 10.9103 15.3256 11.1633 15.2871 12.007C15.2809 12.5143 15.1877 13.0168 15.0117 13.4927C14.8786 13.8377 14.6747 14.1511 14.4132 14.4126C14.1517 14.6741 13.8383 14.878 13.4933 15.0111C13.0174 15.1871 12.5149 15.2803 12.0076 15.2865C11.1642 15.3246 10.9113 15.333 8.77501 15.333C6.63873 15.333 6.38579 15.325 5.5424 15.2865C5.03509 15.2803 4.53259 15.1871 4.05676 15.0111C3.71169 14.878 3.39832 14.6741 3.1368 14.4126C2.87529 14.1511 2.67143 13.8377 2.53835 13.4927C2.3623 13.0168 2.26915 12.5143 2.26294 12.007C2.22485 11.1633 2.21647 10.9103 2.21647 8.77441C2.21647 6.63852 2.22446 6.38558 2.26294 5.54181C2.26915 5.03449 2.3623 4.53199 2.53835 4.05616C2.67143 3.7111 2.87529 3.39772 3.1368 3.13621C3.39832 2.87469 3.71169 2.67084 4.05676 2.53776C4.53259 2.36171 5.03509 2.26855 5.5424 2.26234C6.38617 2.22425 6.63911 2.21587 8.77501 2.21587V2.21587ZM8.77501 0.774414C6.60369 0.774414 6.33017 0.783556 5.47688 0.822412C4.81293 0.835618 4.15603 0.961331 3.53412 1.1942C3.00062 1.39521 2.5174 1.7102 2.11818 2.11721C1.71081 2.51657 1.39555 3.00006 1.19442 3.5339C0.961546 4.15581 0.835833 4.81272 0.822627 5.47667C0.784533 6.3292 0.775391 6.60271 0.775391 8.77403C0.775391 10.9454 0.784533 11.2189 0.823388 12.0722C0.836595 12.7361 0.962308 13.393 1.19518 14.0149C1.39609 14.5487 1.71109 15.0322 2.11818 15.4316C2.51762 15.8387 3.00111 16.1537 3.53488 16.3546C4.15679 16.5875 4.81369 16.7132 5.47764 16.7264C6.33094 16.7645 6.6033 16.7744 8.77577 16.7744C10.9482 16.7744 11.2206 16.7653 12.0739 16.7264C12.7379 16.7132 13.3948 16.5875 14.0167 16.3546C14.5479 16.1487 15.0303 15.8342 15.4331 15.4312C15.8358 15.0282 16.15 14.5455 16.3556 14.0142C16.5885 13.3923 16.7142 12.7353 16.7274 12.0714C16.7655 11.2189 16.7746 10.9454 16.7746 8.77403C16.7746 6.60271 16.7655 6.3292 16.7266 5.4759C16.7134 4.81195 16.5877 4.15505 16.3548 3.53314C16.1539 2.99937 15.8389 2.51588 15.4318 2.11645C15.0324 1.70935 14.5489 1.39435 14.0151 1.19344C13.3932 0.960569 12.7363 0.834856 12.0724 0.82165C11.2198 0.783557 10.9463 0.774414 8.77501 0.774414Z" fill="currentColor"></path>
+                          <path d="M8.77597 4.66797C7.96348 4.66797 7.16924 4.9089 6.49369 5.36029C5.81813 5.81168 5.2916 6.45326 4.98067 7.2039C4.66975 7.95454 4.5884 8.78052 4.7469 9.57739C4.90541 10.3743 5.29666 11.1062 5.87118 11.6808C6.44569 12.2553 7.17766 12.6465 7.97454 12.805C8.77141 12.9635 9.59739 12.8822 10.348 12.5713C11.0987 12.2603 11.7402 11.7338 12.1916 11.0582C12.643 10.3827 12.884 9.58845 12.884 8.77596C12.884 7.68646 12.4512 6.64157 11.6808 5.87117C10.9104 5.10077 9.86547 4.66797 8.77597 4.66797ZM8.77597 11.4425C8.24857 11.4425 7.73303 11.2861 7.29452 10.9931C6.85601 10.7001 6.51423 10.2837 6.3124 9.7964C6.11058 9.30916 6.05777 8.77301 6.16066 8.25575C6.26355 7.73849 6.51752 7.26336 6.89044 6.89044C7.26336 6.51751 7.73849 6.26355 8.25575 6.16066C8.77301 6.05777 9.30916 6.11058 9.79641 6.3124C10.2837 6.51423 10.7001 6.856 10.9931 7.29451C11.2861 7.73302 11.4425 8.24857 11.4425 8.77596C11.4425 9.48317 11.1616 10.1614 10.6615 10.6615C10.1614 11.1616 9.48318 11.4425 8.77597 11.4425V11.4425Z" fill="currentColor"></path>
+                          <path d="M13.0459 5.46434C13.5761 5.46434 14.0058 5.03456 14.0058 4.50439C14.0058 3.97422 13.5761 3.54443 13.0459 3.54443C12.5157 3.54443 12.0859 3.97422 12.0859 4.50439C12.0859 5.03456 12.5157 5.46434 13.0459 5.46434Z" fill="currentColor"></path>
+                        </svg></div>
+                    </a>
+                    <a href="#" target="_blank" class="social_link w-inline-block">
+                      <div class="social_icon w-embed"><svg width="16" height="16" viewbox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <g clip-path="url(#clip0_188_814)">
+                            <path d="M2.99171 1.50014C2.99171 2.092 2.51599 2.57157 1.92885 2.57157C1.34171 2.57157 0.865993 2.092 0.865993 1.50014C0.865993 0.908711 1.34171 0.428711 1.92885 0.428711C2.51599 0.428711 2.99171 0.908711 2.99171 1.50014ZM3.00028 3.42871H0.857422V10.2859H3.00028V3.42871ZM6.42114 3.42871H4.29199V10.2859H6.42156V6.68628C6.42156 4.68485 9.00542 4.52114 9.00542 6.68628V10.2859H11.1431V5.944C11.1431 2.56685 7.31942 2.68985 6.42114 4.35228V3.42871Z" fill="currentColor"></path>
+                          </g>
+                          <defs>
+                            <clippath id="clip0_188_814">
+                              <rect width="10.2857" height="12" fill="currentColor" transform="translate(0.857422)"></rect>
+                            </clippath>
+                          </defs>
+                        </svg></div>
+                    </a>
+                  </div>
+                </div>
+                <div class="foote_right">
+                  <div class="footer-link_wrap">
+                    <div class="footer-link_title">
+                      <div class="text-style-allcaps text-size-small">Company</div>
+                    </div>
+                    <a href="about.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">About</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">About</div>
+                      </div>
+                    </a>
+                    <a href="/about#leadership" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Leadership</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Leadership</div>
+                      </div>
+                    </a>
+                    <a href="our-story.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Our Story</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Our Story</div>
+                      </div>
+                    </a>
+                    <a href="services.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Services</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Services<br></div>
+                      </div>
+                    </a>
+                    <a href="contact.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Contact</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Contact</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="footer-link_wrap">
+                    <div class="footer-link_title">
+                      <div class="text-style-allcaps text-size-small">PROJECTS</div>
+                    </div>
+                    <a href="projects.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Projects</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Projects</div>
+                      </div>
+                    </a>
+                    <a href="investment.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Investment</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Investment</div>
+                      </div>
+                    </a>
+                    <a href="sustainability.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Sustainability</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Sustainability</div>
+                      </div>
+                    </a>
+                  </div>
+                  <div class="footer-link_wrap">
+                    <div class="footer-link_title">
+                      <div class="text-style-allcaps text-size-small">RESOURCES</div>
+                    </div>
+                    <a href="news.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">News</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">News<br></div>
+                      </div>
+                    </a>
+                    <a href="legal.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Privacy</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">Privacy</div>
+                      </div>
+                    </a>
+                    <a href="legal.html" class="footer-link w-inline-block">
+                      <div class="text-size-regular">Terms</div>
+                      <div class="footer-link_hover">
+                        <div class="text-size-regular">T‍erms</div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="footer_bottom"><img src="images/Empower-With-Icon-04-04.svg" loading="lazy" alt="" class="image-3">
+                <a href="#hero" class="page-scroll w-inline-block">
+                  <div class="page-up"><img src="images/page-up.svg" loading="lazy" alt="Icon" class="page-up_icon">
+                    <div class="page-up_hover"><img src="images/page-up.svg" loading="lazy" alt="Icon" class="page-up_icon"></div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="footer_credits">
+          <div class="padding-global">
+            <div class="w-layout-blockcontainer container-huge w-container">
+              <div class="footer_credits-wrap">
+                <div class="footer_credits-left">
+                  <a href="https://houseworkgroup.com/" target="_blank" class="credits-link"><span class="opacity-60">Site Development by Housework</span></a>
+                </div>
+                <div class="footer_credits-right">
+                  <a href="legal.html" class="credits-link">Terms &amp; Conditions</a>
+                  <div class="credits-divider"></div>
+                  <a href="legal.html" class="credits-link">Privacy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=69680db5fff63daf848738e1" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.15.0/gsap.min.js" defer></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.15.0/Draggable.min.js" defer></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.15.0/InertiaPlugin.min.js" defer></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.15.0/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.15.0/Flip.min.js" defer></script>
+  <script src="https://cdn.prod.website-files.com/gsap/3.15.0/SplitText.min.js" defer></script>
+  <script type="text/javascript">gsap.registerPlugin(Draggable,InertiaPlugin,ScrollTrigger,Flip,SplitText);</script>
+  <script>
+// Lenis (with GSAP Scroltrigger)
+const lenis = new Lenis();
+lenis.on('scroll', ScrollTrigger.update);
+gsap.ticker.add((time) => {lenis.raf(time * 1000);});
+gsap.ticker.lagSmoothing(0);
+</script>
+  <script>
+// ==============================================
+// GSAP Marquee Effect
+// ==============================================
+document.addEventListener('DOMContentLoaded', function() {
+    // ============================================
+    // Get all marquee containers
+    // ============================================
+    const marquees = document.querySelectorAll('[data-marquee]');
+    if (!marquees.length) return;
+    // ============================================
+    // Process each marquee
+    // ============================================
+    marquees.forEach(function(wrap) {
+        const track = wrap.querySelector('[data-marquee-content]');
+        if (!track) return;
+        // ============================================
+        // GSAP Context for proper cleanup
+        // ============================================
+        let ctx = null;
+        // ============================================
+        // Configuration from attributes
+        // ============================================
+        const CONFIG = {
+            speed: parseFloat(wrap.getAttribute('data-marquee-speed') || '60'),
+            direction: (wrap.getAttribute('data-marquee-direction') || 'left').toLowerCase(),
+            gap: wrap.getAttribute('data-marquee-gap') || '0rem',
+            pauseOnHover: wrap.hasAttribute('data-marquee-pause-hover')
+        };
+        // ============================================
+        // State Variables
+        // ============================================
+        let tween = null;
+        let baseWidth = 0;
+        let lastWindowWidth = window.innerWidth;
+        // ============================================
+        // Apply base styles
+        // ============================================
+        gsap.set(wrap, {
+            position: 'relative',
+            overflow: 'hidden',
+            width: '100%'
+        });
+        gsap.set(track, {
+            display: 'flex',
+            flexWrap: 'nowrap',
+            gap: CONFIG.gap
+        });
+        // ============================================
+        // Utility Functions
+        // ============================================
+        function getOriginalItems() {
+            return Array.from(track.children).filter(function(child) {
+                return !child.hasAttribute('data-mq-clone');
+            });
+        }
+        function measureBaseWidth() {
+            let width = 0;
+            getOriginalItems().forEach(function(item) {
+                const rect = item.getBoundingClientRect();
+                width += rect.width;
+            });
+            // Add gap between items
+            const gapValue = parseFloat(window.getComputedStyle(track).gap) || 0;
+            const itemCount = getOriginalItems().length;
+            if (itemCount > 1) {
+                width += gapValue * itemCount;
+            }
+            return width;
+        }
+        function removeClones() {
+            Array.from(track.querySelectorAll('[data-mq-clone]')).forEach(function(clone) {
+                clone.remove();
+            });
+        }
+        function createClones() {
+            const wrapWidth = wrap.offsetWidth;
+            const originals = getOriginalItems();
+            if (!originals.length || baseWidth === 0) return;
+            // Calculate how many sets needed
+            const setsNeeded = Math.ceil(wrapWidth / baseWidth) + 2;
+            for (let i = 0; i < setsNeeded; i++) {
+                originals.forEach(function(item) {
+                    const clone = item.cloneNode(true);
+                    clone.setAttribute('data-mq-clone', '');
+                    clone.setAttribute('aria-hidden', 'true');
+                    track.appendChild(clone);
+                });
+            }
+        }
+        // ============================================
+        // Main Animation Setup
+        // ============================================
+        function setup() {
+            // Kill existing context and animations
+            if (ctx) {
+                ctx.revert();
+                ctx = null;
+            }
+            // Reset position
+            gsap.set(track, { x: 0 });
+            // Remove old clones
+            removeClones();
+            // Measure original content width
+            baseWidth = measureBaseWidth();
+            if (baseWidth === 0) return;
+            // Create enough clones for seamless loop
+            createClones();
+            // Calculate duration based on speed
+            const duration = baseWidth / CONFIG.speed;
+            // Create new GSAP context
+            ctx = gsap.context(function() {
+                // Set starting position for right direction
+                if (CONFIG.direction === 'right') {
+                    gsap.set(track, { x: -baseWidth });
+                }
+                // Create seamless loop
+                const fromX = CONFIG.direction === 'right' ? -baseWidth : 0;
+                const toX = CONFIG.direction === 'right' ? 0 : -baseWidth;
+                tween = gsap.fromTo(track, 
+                    { x: fromX },
+                    {
+                        x: toX,
+                        duration: duration,
+                        ease: 'none',
+                        repeat: -1
+                    }
+                );
+            }, wrap);
+            // Setup hover events after context creation
+            setupHoverEvents();
+        }
+        // ============================================
+        // Hover Pause Setup
+        // ============================================
+        function setupHoverEvents() {
+            if (!CONFIG.pauseOnHover) return;
+            // Remove old listeners first
+            wrap.removeEventListener('mouseenter', handleMouseEnter);
+            wrap.removeEventListener('mouseleave', handleMouseLeave);
+            // Add new listeners
+            wrap.addEventListener('mouseenter', handleMouseEnter);
+            wrap.addEventListener('mouseleave', handleMouseLeave);
+        }
+        function handleMouseEnter() {
+            if (tween) {
+                tween.pause();
+            }
+        }
+        function handleMouseLeave() {
+            if (tween) {
+                tween.play();
+            }
+        }
+        // ============================================
+        // Resize Handler (only on window width change)
+        // ============================================
+        let resizeTimer = null;
+        function handleResize() {
+            if (resizeTimer) {
+                clearTimeout(resizeTimer);
+            }
+            resizeTimer = setTimeout(function() {
+                const newWindowWidth = window.innerWidth;
+                // Only rebuild if window WIDTH changed
+                // Ignores mobile address bar height changes
+                if (newWindowWidth !== lastWindowWidth) {
+                    lastWindowWidth = newWindowWidth;
+                    setup();
+                }
+            }, 300);
+        }
+        window.addEventListener('resize', handleResize);
+        // ============================================
+        // Visibility Observer (pause when off-screen)
+        // ============================================
+        const visibilityObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (!tween) return;
+                if (entry.isIntersecting) {
+                    tween.play();
+                } else {
+                    tween.pause();
+                }
+            });
+        }, {
+            threshold: 0,
+            rootMargin: '50px'
+        });
+        visibilityObserver.observe(wrap);
+        // ============================================
+        // Reduced Motion Support
+        // ============================================
+        const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+        function handleReducedMotion() {
+            if (!tween) return;
+            if (reducedMotion.matches) {
+                tween.pause();
+            } else {
+                tween.play();
+            }
+        }
+        reducedMotion.addEventListener('change', handleReducedMotion);
+        // ============================================
+        // Cleanup function for SPA navigation
+        // ============================================
+        function cleanup() {
+            if (ctx) {
+                ctx.revert();
+            }
+            if (resizeTimer) {
+                clearTimeout(resizeTimer);
+            }
+            visibilityObserver.disconnect();
+            window.removeEventListener('resize', handleResize);
+            wrap.removeEventListener('mouseenter', handleMouseEnter);
+            wrap.removeEventListener('mouseleave', handleMouseLeave);
+        }
+        // Expose cleanup for external use (Barba.js, etc)
+        wrap._marqueeCleanup = cleanup;
+        // ============================================
+        // Initialize after fonts load
+        // ============================================
+        function init() {
+            setup();
+            handleReducedMotion();
+        }
+        if (document.fonts && document.fonts.ready) {
+            document.fonts.ready.then(init);
+        } else {
+            setTimeout(init, 200);
+        }
+    });
+});
+</script>
+</body>
+</html>
