@@ -1,2 +1,5 @@
 name = "empower-site"
-pages_build_output_dir = "public"
+compatibility_date = "2026-05-04"
+
+[assets]
+directory = "./public"
