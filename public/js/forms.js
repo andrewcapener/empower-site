@@ -1,11 +1,18 @@
-// Web3Forms handler — capture phase fires before Webflow's form intercept
+// Web3Forms handler
+// Runs after Webflow has bound its listeners, then clones each form
+// element to strip all existing handlers, and re-attaches our own.
 (function () {
-  function handleForm(form) {
+  function handleForm(originalForm) {
+    var parent = originalForm.parentNode;
+
+    // Clone strips all event listeners Webflow attached to this element
+    var form = originalForm.cloneNode(true);
+    parent.replaceChild(form, originalForm);
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      e.stopImmediatePropagation();
 
-      var wrapper = form.closest('.w-form');
+      var wrapper = form.parentElement;
       var successEl = wrapper && wrapper.querySelector('.w-form-done');
       var errorEl = wrapper && wrapper.querySelector('.w-form-fail');
 
@@ -34,10 +41,11 @@
           if (errorEl) errorEl.style.display = 'block';
           if (btn) { btn.value = originalVal; btn.disabled = false; }
         });
-    }, true); // capture phase — beats Webflow's bubble-phase listener
+    });
   }
 
-  document.addEventListener('DOMContentLoaded', function () {
+  // Use window.onload so Webflow's DOMContentLoaded handlers have all fired first
+  window.addEventListener('load', function () {
     ['wf-form-Newsletter', 'wf-form-Contact'].forEach(function (id) {
       var form = document.getElementById(id);
       if (form) handleForm(form);
