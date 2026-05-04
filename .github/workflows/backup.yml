@@ -1,0 +1,38 @@
+name: Weekly Backup
+
+on:
+  schedule:
+    - cron: '0 8 * * 0'  # Every Sunday at 3am CST (UTC-5)
+  workflow_dispatch:      # allow manual trigger from GitHub UI
+
+jobs:
+  backup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Create dated backup archive
+        run: |
+          DATE=$(date +%Y-%m-%d)
+          zip -r "empower-site-backup-$DATE.zip" public/
+          echo "DATE=$DATE" >> $GITHUB_ENV
+          echo "✅ Backup archive created: empower-site-backup-$DATE.zip"
+          ls -lh "empower-site-backup-$DATE.zip"
+
+      - name: Upload backup as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: empower-site-backup-${{ env.DATE }}
+          path: empower-site-backup-${{ env.DATE }}.zip
+          retention-days: 90
+
+      - name: Verify live site is reachable
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" "https://empowereit.com")
+          echo "Live site status: HTTP $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "🚨 WARNING: Site returned HTTP $STATUS during backup window"
+            exit 1
+          fi
+          echo "✅ Site confirmed live at time of backup"

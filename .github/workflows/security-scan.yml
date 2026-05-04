@@ -1,0 +1,85 @@
+name: Daily Security Scan
+
+on:
+  schedule:
+    - cron: '0 14 * * *'  # 9am CST (UTC-5) every day
+  workflow_dispatch:       # allow manual trigger from GitHub UI
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch live site
+        id: fetch
+        run: |
+          echo "Scanning https://empowereit.com"
+          PAGE=$(curl -sL --max-time 30 "https://empowereit.com")
+          if [ -z "$PAGE" ]; then
+            echo "ERROR: Could not fetch site"
+            exit 1
+          fi
+          echo "page<<EOF" >> $GITHUB_OUTPUT
+          echo "$PAGE" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Check for malicious domains
+        run: |
+          PAGE=$(curl -sL "https://empowereit.com")
+          FLAGGED=0
+
+          MALICIOUS=(
+            "profitablecpmratenetwork"
+            "highperformanceformat"
+            "autoimageco"
+            "coinhive"
+            "cryptonight"
+          )
+
+          for domain in "${MALICIOUS[@]}"; do
+            if echo "$PAGE" | grep -qi "$domain"; then
+              echo "🚨 ALERT: Malicious domain found — $domain"
+              FLAGGED=1
+            fi
+          done
+
+          APPROVED=(
+            "cdn.prod.website-files.com"
+            "cdn.jsdelivr.net"
+            "d3e54v103j8qbb.cloudfront.net"
+            "fonts.googleapis.com"
+            "fonts.gstatic.com"
+            "www.googletagmanager.com"
+            "www.google-analytics.com"
+            "api.web3forms.com"
+          )
+
+          SCRIPTS=$(echo "$PAGE" | grep -oE 'src="https?://[^"]+' | sed 's/src="//')
+          while IFS= read -r url; do
+            [ -z "$url" ] && continue
+            domain=$(echo "$url" | sed -E 's|https?://([^/]+).*|\1|')
+            approved=false
+            for a in "${APPROVED[@]}"; do
+              [[ "$domain" == "$a" ]] && approved=true && break
+            done
+            if [ "$approved" = false ]; then
+              echo "⚠️  Unapproved external script: $domain"
+              FLAGGED=1
+            fi
+          done <<< "$SCRIPTS"
+
+          if [ "$FLAGGED" -eq 1 ]; then
+            echo "RESULT: ACTION REQUIRED"
+            exit 1
+          else
+            echo "✅ CLEAN — No unauthorized scripts detected"
+          fi
+
+      - name: Check HTTP status
+        run: |
+          STATUS=$(curl -o /dev/null -s -w "%{http_code}" "https://empowereit.com")
+          echo "HTTP status: $STATUS"
+          if [ "$STATUS" != "200" ]; then
+            echo "🚨 Site returned HTTP $STATUS"
+            exit 1
+          fi
+          echo "✅ Site is up (HTTP 200)"
