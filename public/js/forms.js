@@ -1,14 +1,8 @@
 // Web3Forms handler
-// Runs after Webflow has bound its listeners, then clones each form
-// element to strip all existing handlers, and re-attaches our own.
+// Webflow intercepts forms inside .w-form via event delegation.
+// We removed .w-form from these wrappers so Webflow ignores them entirely.
 (function () {
-  function handleForm(originalForm) {
-    var parent = originalForm.parentNode;
-
-    // Clone strips all event listeners Webflow attached to this element
-    var form = originalForm.cloneNode(true);
-    parent.replaceChild(form, originalForm);
-
+  function handleForm(form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
 
@@ -44,8 +38,7 @@
     });
   }
 
-  // Use window.onload so Webflow's DOMContentLoaded handlers have all fired first
-  window.addEventListener('load', function () {
+  document.addEventListener('DOMContentLoaded', function () {
     ['wf-form-Newsletter', 'wf-form-Contact'].forEach(function (id) {
       var form = document.getElementById(id);
       if (form) handleForm(form);
