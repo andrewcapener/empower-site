@@ -2,7 +2,7 @@
   "name": "empower-site",
   "version": "1.0.0",
   "scripts": {
-    "deploy": "wrangler pages deploy public",
+    "deploy": "git push origin main && CLOUDFLARE_ACCOUNT_ID=ac158584895280b81191622076ea55d9 wrangler deploy",
     "preview": "npx serve public -p 3000"
   }
 }
