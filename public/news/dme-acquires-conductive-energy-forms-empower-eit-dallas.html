@@ -19,6 +19,13 @@
 a[href*="dme-acquires"] .image,
 .blog-hero_right .image { object-position: left center !important; }
 </style>
+<style>
+/* Blog post layout fix — full-width body, hide sticky sidebar */
+.post_component { display: block !important; grid-template-columns: unset !important; padding-left: 0 !important; padding-right: 0 !important; }
+.post_sticky-wrap { display: none !important; }
+.post_body { padding-right: 0 !important; max-width: 800px !important; width: 100% !important; margin: 0 auto !important; }
+.text-rich-text { font-size: 1rem; line-height: 1.75; }
+</style>
 </head><body><div class="page-wrapper"><div class="global-styles w-embed"><style>
 
 /* Make text look crisper and more legible in all browsers */
