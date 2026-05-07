@@ -514,4 +514,25 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-</script></body></html>
+</script><script>
+// Disable Webflow IX2 scroll-in animations — show all content immediately
+(window.Webflow = window.Webflow || []).push(function() {
+  function clearHidden() {
+    document.querySelectorAll('[style]').forEach(function(el) {
+      if (el.style.opacity === '0') {
+        el.style.opacity = '';
+        el.style.transform = '';
+        el.style.webkitTransform = '';
+        el.style.visibility = '';
+      }
+      if (el.style.visibility === 'hidden') {
+        el.style.visibility = '';
+      }
+    });
+  }
+  clearHidden();
+  setTimeout(clearHidden, 100);
+  setTimeout(clearHidden, 400);
+});
+</script>
+</body></html>
