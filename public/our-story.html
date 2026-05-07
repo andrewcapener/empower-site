@@ -1394,24 +1394,50 @@ document.addEventListener('DOMContentLoaded', () => {
   gsap.effects.initTabSystems();
 });
 </script><script defer="" src="/js/forms.js"></script><script>
-// Disable Webflow IX2 scroll-in animations — show all content immediately
-(window.Webflow = window.Webflow || []).push(function() {
-  function clearHidden() {
+// Disable Webflow IX2 animations — show all content immediately
+(function() {
+  function clearIX2() {
     document.querySelectorAll('[style]').forEach(function(el) {
-      if (el.style.opacity === '0') {
-        el.style.opacity = '';
-        el.style.transform = '';
-        el.style.webkitTransform = '';
-        el.style.visibility = '';
+      var op = parseFloat(el.style.opacity);
+      if (!isNaN(op) && op < 0.9) {
+        el.style.removeProperty('opacity');
+        el.style.removeProperty('transform');
+        el.style.removeProperty('-webkit-transform');
+        el.style.removeProperty('visibility');
       }
-      if (el.style.visibility === 'hidden') {
-        el.style.visibility = '';
-      }
+      if (el.style.visibility === 'hidden') el.style.removeProperty('visibility');
     });
   }
-  clearHidden();
-  setTimeout(clearHidden, 100);
-  setTimeout(clearHidden, 400);
-});
+  // Hook into Webflow init
+  (window.Webflow = window.Webflow || []).push(function() {
+    clearIX2(); setTimeout(clearIX2, 50); setTimeout(clearIX2, 200); setTimeout(clearIX2, 500);
+  });
+  // Also run independently
+  document.addEventListener('DOMContentLoaded', function() {
+    clearIX2(); setTimeout(clearIX2, 100); setTimeout(clearIX2, 400); setTimeout(clearIX2, 800);
+  });
+  window.addEventListener('load', function() {
+    clearIX2(); setTimeout(clearIX2, 100); setTimeout(clearIX2, 500);
+  });
+  // MutationObserver as last resort
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.type === 'attributes' && m.attributeName === 'style') {
+        var el = m.target;
+        var op = parseFloat(el.style.opacity);
+        if (!isNaN(op) && op < 0.9) {
+          el.style.removeProperty('opacity');
+          el.style.removeProperty('transform');
+          el.style.removeProperty('-webkit-transform');
+        }
+      }
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    observer.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['style'] });
+    // Stop observing after 3s to avoid performance hit
+    setTimeout(function() { observer.disconnect(); }, 3000);
+  });
+})();
 </script>
 </body></html>
