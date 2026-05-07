@@ -4,7 +4,26 @@
 <!-- Lenis JS -->
 <script src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script> 
 
-<meta name="format-detection" content="telephone=no"></head><body><div class="page-wrapper"><div class="global-styles w-embed"><style>
+<meta name="format-detection" content="telephone=no"><style>
+/* Remove image hover motion */
+.image { transition: none !important; }
+.blog_card-image .image:hover, .team_image .image:hover,
+.nav_card-img .image:hover, .slider-bg_img .image:hover,
+.about-slide .image:hover { transform: none !important; }
+/* Kill ALL transitions and transforms on nav card images */
+.nav_card-img, .nav_card-img img, .nav_card-img .image,
+.nav_card-img .image.is--explore { transition: none !important; transform: none !important; }
+.dropdown_card-img .image { transition: none !important; transform: none !important; }
+.square-wrap { opacity: 0 !important; pointer-events: none !important; }
+.slider-hover { display: none !important; }
+/* Nav card equal size */
+.nav_card-img { height: 120px !important; overflow: hidden !important; }
+.nav_card-img .image { width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center top !important; }
+/* Building photo — show EMPOWER signage */
+a[href*="dme-acquires"] .image,
+.blog-hero_right .image { object-position: left center !important; }
+</style>
+</head><body><div class="page-wrapper"><div class="global-styles w-embed"><style>
 
 /* Make text look crisper and more legible in all browsers */
 body {
@@ -510,4 +529,42 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
-</script></body></html>
+</script><script>
+(function() {
+  function clearIX2() {
+    document.querySelectorAll('[style]').forEach(function(el) {
+      var op = parseFloat(el.style.opacity);
+      if (!isNaN(op) && op < 0.9) {
+        el.style.removeProperty('opacity');
+        el.style.removeProperty('transform');
+        el.style.removeProperty('-webkit-transform');
+        el.style.removeProperty('visibility');
+      }
+      if (el.style.visibility === 'hidden') el.style.removeProperty('visibility');
+    });
+  }
+  (window.Webflow = window.Webflow || []).push(function() {
+    clearIX2(); setTimeout(clearIX2, 50); setTimeout(clearIX2, 200); setTimeout(clearIX2, 500);
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    clearIX2(); setTimeout(clearIX2, 100); setTimeout(clearIX2, 400); setTimeout(clearIX2, 800);
+  });
+  window.addEventListener('load', function() { clearIX2(); setTimeout(clearIX2, 100); setTimeout(clearIX2, 500); });
+  var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(m) {
+      if (m.type === 'attributes' && m.attributeName === 'style') {
+        var el = m.target;
+        var op = parseFloat(el.style.opacity);
+        if (!isNaN(op) && op < 0.9) {
+          el.style.removeProperty('opacity'); el.style.removeProperty('transform'); el.style.removeProperty('-webkit-transform');
+        }
+      }
+    });
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    observer.observe(document.body, { subtree: true, attributes: true, attributeFilter: ['style'] });
+    setTimeout(function() { observer.disconnect(); }, 3000);
+  });
+})();
+</script>
+</body></html>

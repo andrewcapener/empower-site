@@ -20,6 +20,10 @@
 .blog_card-image .image:hover, .team_image .image:hover,
 .nav_card-img .image:hover, .slider-bg_img .image:hover,
 .about-slide .image:hover { transform: none !important; }
+/* Kill ALL transitions and transforms on nav card images */
+.nav_card-img, .nav_card-img img, .nav_card-img .image,
+.nav_card-img .image.is--explore { transition: none !important; transform: none !important; }
+.dropdown_card-img .image { transition: none !important; transform: none !important; }
 .square-wrap { opacity: 0 !important; pointer-events: none !important; }
 .slider-hover { display: none !important; }
 /* Nav card equal size */
