@@ -27,6 +27,21 @@
 <!--  Lenis JS  -->
 <script defer="" src="https://cdn.jsdelivr.net/npm/lenis@1.2.3/dist/lenis.min.js"></script>
 <meta content="telephone=no" name="format-detection"/>
+<style>
+/* Remove image hover motion */
+.image { transition: none !important; }
+.blog_card-image .image:hover, .team_image .image:hover,
+.nav_card-img .image:hover, .slider-bg_img .image:hover,
+.about-slide .image:hover { transform: none !important; }
+.square-wrap { opacity: 0 !important; pointer-events: none !important; }
+.slider-hover { display: none !important; }
+/* Nav card equal size */
+.nav_card-img { height: 120px !important; overflow: hidden !important; }
+.nav_card-img .image { width: 100% !important; height: 100% !important; object-fit: cover !important; object-position: center top !important; }
+/* Building photo — show EMPOWER signage */
+a[href*="dme-acquires"] .image,
+.blog-hero_right .image { object-position: left center !important; }
+</style>
 </head>
 <body class="body">
 <div class="page-wrapper">
@@ -218,7 +233,7 @@ margin: 0rem !important;
 </div>
 </a>
 <a class="nav_card-link w-inline-block" href="leadership.html">
-<div class="nav_card-img"><img alt="" class="image is--explore" loading="lazy" sizes="100vw" src="/images/cms/4995DCC1-EF51-4E11-BF11-1751AA65CE22.PNG"/></div>
+<div class="nav_card-img"><img alt="" class="image is--explore" loading="lazy" sizes="100vw" src="/images/leadership-team-nav.jpg"/></div>
 <div class="nav_card-text">
 <div class="text-style-allcaps text-weight-medium text-size-tiny">Leadership</div>
 </div>
